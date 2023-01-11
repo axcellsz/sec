@@ -56,21 +56,6 @@ VMESS_NON_TLS=`cat<<EOF
       "tls": "none"
 }
 EOF`
-VMESS_GRPC=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "443",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "grpc",
-      "path": "vmess-grpc",
-      "type": "none",
-      "host": "media.fcgk35-1.fna.whatsapp.net",
-      "tls": "tls"
-}
-EOF`
 vmesslink1="vmess://$(echo $VMESS_WS | base64 -w 0)"
 vmesslink2="vmess://$(echo $VMESS_NON_TLS | base64 -w 0)"
 vmesslink3="vmess://$(echo $VMESS_GRPC | base64 -w 0)"
