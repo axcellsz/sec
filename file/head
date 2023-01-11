@@ -4,10 +4,15 @@ GRB="\e[92;1m"
 NCO='\033[0m'
 RED='\033[0;31m'
 
+IPX=$(curl -s ipv4.icanhazip.com)
+DOM=$(cat /etc/xray/domain)
+
 if [[ $nginx == "running" ]]; then
-    status_server="${GRB}Online ✔${NCO}"
+    status_server="${GRB}[ON]${NCO}"
 else
-    status_server="${RED}Offline ✖${NCO}"
+    status_server="${RED}[OFF]${NCO}"
 fi
 
-echo -e " Server Xray Status:" $status_server
+echo -e " IP   : $IPX"
+echo -e " HOST : $DOM"
+echo -e " X-RAY STATUS " $status_server
