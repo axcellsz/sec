@@ -1,0 +1,5 @@
+#!/bin/bash
+wget -O /usr/bin/cmenu https://github.com/axcellsz/sec/raw/main/file/cmenu && chmod +x /usr/bin/cmenu
+wget -O /usr/bin/cmenu https://github.com/axcellsz/sec/raw/main/file/cmenu && chmod +x /usr/bin/cmenu
+wget -O /usr/bin/cmenu https://github.com/axcellsz/sec/raw/main/file/cmenu && chmod +x /usr/bin/cmenu
+
