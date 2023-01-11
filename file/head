@@ -13,5 +13,7 @@ else
     status_server="${RED}[OFF]${NCO}"
 fi
 
-echo -e " Ip / Host   : $IPX / $DOM"
-echo -e " X-ray Status " $status_server
+echo -e " ${NCO}Ip / Host   : ${GRB}$IPX / $DOM"
+echo -e " ${NCO}X-ray Status  ${GRB}$status_server               t.me/axsystem"
+echo -e "=========================================================="
+   
