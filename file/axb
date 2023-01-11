@@ -5,7 +5,7 @@ clear
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
     clear
     echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\e[42m         Buat akun vmess          \E[0m"
+    echo -e "          Buat akun vmess          "
     echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     
     read -rp "User: " -e user
@@ -14,7 +14,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
     if [[ ${CLIENT_EXISTS} == '1' ]]; then
         clear
         echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo -e "\e[42m         Buat akun vmess          \E[0m"
+        echo -e "         Buat akun vmess          "
         echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         echo ""
         echo "Nama tersebut sudah digunakan, masukan nama lain!"
