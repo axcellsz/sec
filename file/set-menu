@@ -4,10 +4,10 @@ echo -e "1. GANTI DOMAIN"
 echo -e "2. PERBARUI SERTIFIKAT"
 echo -e "3. RUBAH PORT"
 echo -e "3. KEMBALI"
-read -p "     Select From Options :  " vvv
-case $vvv in 
+read -p "     Select From Options :  " set-cmenu
+case $set-cmenu in 
 1)
-add-domain
+ad-dom
 ;;
 2)
 cert
@@ -16,7 +16,7 @@ cert
 set-port
 ;;
 4)
-menu
+cmenu
 ;;
 *)
 echo "Input The Correct Number !"
