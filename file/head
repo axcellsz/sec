@@ -18,6 +18,6 @@ echo -e " ${NCO}Ip / Host   : ${GRB}$IPX / $DOM"
 echo -e " ${NCO}X-ray Status  ${GRB}$status_server           t.me/axsystem"
 echo -e "==================================================="
    
-$NC\e[032;1mIp / Host :\e[0m \e[1m$IPX\e[0m
-$NC\e[032;1mXray Status :\e[0m \e[1m$status_server\e[0m
+$NCO\e[032;1mIp / Host :\e[0m \e[1m$IPX\e[0m
+$NCO\e[032;1mXray Status :\e[0m \e[1m$status_server\e[0m
 echo -e "==================================================="
