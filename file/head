@@ -14,6 +14,6 @@ else
 fi
 
 echo -e " ${NCO}Ip / Host   : ${GRB}$IPX / $DOM"
-echo -e " ${NCO}X-ray Status  ${GRB}$status_server               t.me/axsystem"
-echo -e "=========================================================="
+echo -e " ${NCO}X-ray Status  ${GRB}$status_server           t.me/axsystem"
+echo -e "==================================================="
    
