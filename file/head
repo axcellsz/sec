@@ -1,0 +1,26 @@
+#!/bin/bash
+# COLOR VALIDATION
+RD='\033[0;31m'
+NC='\033[0m'
+gray="\e[1;30m"
+Blue="\033[36m"
+GREEN='\033[0;32m'
+GB="\e[92;1m"
+YL='\033[0;33m'
+IP=$(curl -s ipv4.icanhazip.com)
+DOM=$(cat /etc/xray/domain)
+nginx=$( systemctl status xray | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+ws=$( systemctl status ws | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+clear
+if [[ $nginx == "running" ]]; then
+    status_server="${GB}Online [on]${NC}"
+else
+    status_server="${RD}Offline [off]${NC}"
+fi
+## OUTPUT
+printf "
+$NC
+$NC\e[032;1mIp   :\e[0m \e[1m$IP\e[0m
+$NC\e[032;1mHost :\e[0m \e[1m$DOM\e[0m
+${YL}Ax-vpn${NC}(C)${YL}t.me/axsystem$NC
+echo -e " Server Xray Status:" $status_server
