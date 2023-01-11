@@ -1,28 +1,21 @@
 #!/bin/bash
-red() { echo -e "\\033[32;1m${*}\\033[0m"; }
 domain=$(cat /etc/xray/domain)
 clear
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-    clear
-    echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "          Buat akun vmess          "
-    echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    
-    read -rp "User: " -e user
-    CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
-    
-    if [[ ${CLIENT_EXISTS} == '1' ]]; then
-        clear
-        echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo -e "         Buat akun vmess          "
-        echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo ""
-        echo "Nama tersebut sudah digunakan, masukan nama lain!"
-        echo ""
-        echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        read -n 1 -s -r -p "Press any key to back on menu"
-        menu
-    fi
+clear
+echo -e "BUAT AKUN VMESS DEFAULT"
+echo -e " "    
+read -rp "User: " -e user
+CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+if [[ ${CLIENT_EXISTS} == '1' ]]; then
+clear
+echo -e "BUAT AKUN VMESS XL FLEX"
+echo ""
+echo "Nama Sudah Digunakan"
+echo " "
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
+fi
 done
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
@@ -78,79 +71,6 @@ VMESS_GRPC=`cat<<EOF
       "tls": "tls"
 }
 EOF`
-cat > /var/www/html/vmess-$user.txt <<-END
-_______________________________________________________
-              Format Vmess WS (CDN)
-_______________________________________________________
-
-- name: Vmess-$user-WS (CDN)
-  type: vmess
-  server: ${domain}
-  port: 443
-  uuid: ${uuid}
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ${domain}
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: ${domain}
-_______________________________________________________
-              Format Vmess WS (CDN) Non TLS
-_______________________________________________________
-
-- name: Vmess-$user-WS (CDN) Non TLS
-  type: vmess
-  server: ${domain}
-  port: 80
-  uuid: ${uuid}
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: false
-  servername: ${domain}
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: ${domain}
-_______________________________________________________
-              Format Vmess gRPC (SNI)
-_______________________________________________________
-
-- name: Vmess-$user-gRPC (SNI)
-  server: ${domain}
-  port: 443
-  type: vmess
-  uuid: ${uuid}
-  alterId: 0
-  cipher: auto
-  network: grpc
-  tls: true
-  servername: ${domain}
-  skip-cert-verify: true
-  grpc-opts:
-    grpc-service-name: vmess-grpc
-
-_______________________________________________________
-              Link Vmess Account
-_______________________________________________________
-Link TLS : vmess://$(echo $VMESS_WS | base64 -w 0)
-_______________________________________________________
-Link none TLS : vmess://$(echo $VMESS_NON_TLS | base64 -w 0)
-_______________________________________________________
-Link GRPC : vmess://$(echo $VMESS_GRPC | base64 -w 0)
-_______________________________________________________
-
-
-
-END
-
 vmesslink1="vmess://$(echo $VMESS_WS | base64 -w 0)"
 vmesslink2="vmess://$(echo $VMESS_NON_TLS | base64 -w 0)"
 vmesslink3="vmess://$(echo $VMESS_GRPC | base64 -w 0)"
@@ -175,4 +95,4 @@ echo -e "============================"
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Powered by Xeileencell"
 
-menu
+cmenu
