@@ -4,8 +4,8 @@ echo -e "1. GANTI DOMAIN"
 echo -e "2. PERBARUI SERTIFIKAT"
 echo -e "3. RUBAH PORT"
 echo -e "4. KEMBALI"
-read -p "     Select From Options :  " cmenu
-case $cmenu in 
+read -p "     Select From Options :  " menu
+case $menu in 
 1)
 ad-dom
 ;;
