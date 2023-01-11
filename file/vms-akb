@@ -26,21 +26,6 @@ sed -i '/#vmess$/a\### '"$user $exp"'\
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-VMESS_WS=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "443",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/vmess",
-      "type": "none",
-      "host": "${domain}",
-      "tls": "tls"
-}
-EOF`
 VMESS_NON_TLS=`cat<<EOF
       {
       "v": "2",
@@ -86,7 +71,7 @@ echo -e "============================"
 echo -e "Link none TLS :
 ${vmesslink2}" | tee -a /etc/log-create-user.log
 echo -e "============================"
-echo -e "Link none GRPC :
+echo -e "Link GRPC :
 ${vmesslink3}" | tee -a /etc/log-create-user.log
 echo -e "============================"
 echo "" | tee -a /etc/log-create-user.log
