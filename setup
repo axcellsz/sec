@@ -60,13 +60,9 @@ END
     rm /var/www/html/*.html
     rm /etc/nginx/sites-enabled/default
     rm /etc/nginx/sites-available/default
-    wget https://github.com/axcellsz/gas/raw/main/file/axz.zip
-    unzip axz.zip
-    rm -f axz.zip
-    mv nginx.conf /etc/nginx/
-    mv xray.conf /etc/nginx/conf.d/
-    chmod +x *
-    mv * /usr/bin/
+wget -O /usr/bin/xp https://github.com/axcellsz/sec/raw/main/file/xp && chmod +x /usr/bin/xp
+wget -O /etc/nginx/nginx.conf https://github.com/axcellsz/sec/raw/main/file/nginx.conf
+wget -O /etc/nginx/conf.d/xray.conf https://github.com/axcellsz/sec/raw/main/file/xray.conf
 systemctl daemon-reload
 systemctl restart nginx
 systemctl restart xray
