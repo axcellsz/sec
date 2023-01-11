@@ -1,0 +1,27 @@
+#!/bin/bash
+clear
+echo -e "1. CEK AKUN"
+echo -e "2. PERBARUI AKUN"
+echo -e "3. HAPUS AKUN"
+echo -e "4. KEMBALI"
+echo -e " "
+read -p "Select From Options :  " menu
+case $menu in 
+1)
+cek-ws
+;;
+2)
+renew-ws
+;;
+3)
+del-ws
+;;
+4)
+menu
+;;
+*)
+echo "Input The Correct Number !"
+clear
+menu
+;;
+esac
