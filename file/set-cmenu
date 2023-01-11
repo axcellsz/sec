@@ -3,7 +3,7 @@ clear
 echo -e "1. GANTI DOMAIN"
 echo -e "2. PERBARUI SERTIFIKAT"
 echo -e "3. RUBAH PORT"
-echo -e "3. KEMBALI"
+echo -e "4. KEMBALI"
 read -p "     Select From Options :  " cmenu
 case $cmenu in 
 1)
