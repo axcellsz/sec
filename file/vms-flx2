@@ -71,9 +71,6 @@ VMESS_GRPC=`cat<<EOF
       "tls": "tls"
 }
 EOF`
-
-END
-
 vmesslink1="vmess://$(echo $VMESS_WS | base64 -w 0)"
 vmesslink2="vmess://$(echo $VMESS_NON_TLS | base64 -w 0)"
 vmesslink3="vmess://$(echo $VMESS_GRPC | base64 -w 0)"
@@ -95,4 +92,4 @@ echo -e "============================"
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Powered by Xeileencell"
 
-menu
+cmenu
