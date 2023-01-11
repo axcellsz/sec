@@ -7,8 +7,8 @@ echo -e "4. VMESS DEFAULT"
 echo -e "5. SETTING"
 echo -e "6. RESTART XRAY"
 echo -e "7. REBOOT VPS"
-read -p "Select From Options :  " cmenu
-case $cmenu in 
+read -p "Select From Options :  " menu
+case $menu in 
 1)
 vms-akb
 ;;
@@ -16,10 +16,10 @@ vms-akb
 vms-flx
 ;;
 3)
-vms-man
+vms-def
 ;;
 4)
-vms-def
+vms-man
 ;;
 5)
 set-cmenu
@@ -31,12 +31,14 @@ systemctl restart xray
 echo -e "SELESAI.."
 sleep 2
 clear
-cmenu
+menu
 ;;
 7)
 reboot
 ;;
 *)
 echo "Input The Correct Number !"
+clear
+menu
 ;;
 esac
