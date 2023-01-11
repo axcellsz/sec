@@ -3,8 +3,11 @@ clear
 echo -e "1. VMESS AKRAB"
 echo -e "2. VMESS FLEX"
 echo -e "3. VMESS MANUAL BUG"
-echo -e "3. VMESS DEFAULT"
-read -p "     Select From Options :  " cmenu
+echo -e "4. VMESS DEFAULT"
+echo -e "5. SETTING"
+echo -e "6. RESTART XRAY"
+echo -e "7. REBOOT VPS"
+read -p "Select From Options :  " cmenu
 case $cmenu in 
 1)
 vms-akb
@@ -17,6 +20,21 @@ vms-man
 ;;
 4)
 vms-def
+;;
+5)
+set-cmenu
+;;
+6)
+systemctl daemon-reload
+systemctl restart nginx
+systemctl restart xray
+echo -e "SELESAI.."
+sleep 2
+clear
+cmenu
+;;
+7)
+reboot
 ;;
 *)
 echo "Input The Correct Number !"
