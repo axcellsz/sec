@@ -4,8 +4,8 @@ echo -e "1. VMESS AKRAB"
 echo -e "2. VMESS FLEX"
 echo -e "3. VMESS MANUAL BUG"
 echo -e "3. VMESS DEFAULT"
-read -p "     Select From Options :  " vvv
-case $vvv in 
+read -p "     Select From Options :  " menu
+case $menu in 
 1)
 axb
 ;;
@@ -13,10 +13,10 @@ axb
 flx
 ;;
 3)
-man
+vms-def
 ;;
 4)
-add-ws
+vms-def
 ;;
 *)
 echo "Input The Correct Number !"
