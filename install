@@ -69,4 +69,4 @@ systemctl restart xray
 echo "Install Selesai"
 sleep 2
 clear
-menu
+cmenu
