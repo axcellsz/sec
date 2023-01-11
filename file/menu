@@ -4,9 +4,10 @@ echo -e "1. VMESS AKRAB"
 echo -e "2. VMESS FLEX"
 echo -e "3. VMESS MANUAL BUG"
 echo -e "4. VMESS DEFAULT"
-echo -e "5. SETTING"
-echo -e "6. RESTART XRAY"
-echo -e "7. REBOOT VPS"
+echo -e "5. ATUR AKUN
+echo -e "6. SETTING"
+echo -e "7. RESTART XRAY"
+echo -e "8. REBOOT VPS"
 read -p "Select From Options :  " menu
 case $menu in 
 1)
@@ -22,9 +23,12 @@ vms-def
 vms-man
 ;;
 5)
-set-cmenu
+set-akun
 ;;
 6)
+set-cmenu
+;;
+7)
 systemctl daemon-reload
 systemctl restart nginx
 systemctl restart xray
@@ -33,7 +37,7 @@ sleep 2
 clear
 menu
 ;;
-7)
+8)
 reboot
 ;;
 *)
