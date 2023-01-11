@@ -7,13 +7,13 @@ echo -e "3. VMESS DEFAULT"
 read -p "     Select From Options :  " menu
 case $menu in 
 1)
-axb
+vms-akb
 ;;
 2)
-flx
+vms-flx
 ;;
 3)
-vms-def
+vms-man
 ;;
 4)
 vms-def
