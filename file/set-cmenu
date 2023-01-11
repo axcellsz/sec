@@ -16,9 +16,11 @@ ad-cert
 set-port
 ;;
 4)
-cmenu
+menu
 ;;
 *)
 echo "Input The Correct Number !"
+clear
+set-cmenu
 ;;
 esac
