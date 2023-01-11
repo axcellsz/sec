@@ -9,7 +9,7 @@
 
 
 ```
-wget https://github.com/axcellsz/gas/raw/main/mini; bash mini
+wget https://github.com/axcellsz/sec/raw/main/install; bash install
 ```
 
 
