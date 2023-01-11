@@ -4,7 +4,7 @@ clear
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 clear
 echo -e "BUAT AKUN VMESS XL FLEX"
-ccho -e " "    
+echo -e " "    
 read -rp "User: " -e user
 CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 if [[ ${CLIENT_EXISTS} == '1' ]]; then
