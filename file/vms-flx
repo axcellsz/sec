@@ -44,7 +44,7 @@ VMESS_WS=`cat<<EOF
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "${domain}",
+      "host": "media.fcgk35-1.fna.whatsapp.net",
       "tls": "tls"
 }
 EOF`
@@ -163,11 +163,11 @@ echo -e "Username   : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo -e "Script By  : Axsystem" | tee -a /etc/log-create-user.log
 echo -e "============================"
-echo -e "Link none TLS :
-${vmesslink2}" | tee -a /etc/log-create-user.log
-echo -e "============================"
 echo -e "Link TLS :
 ${vmesslink1}" | tee -a /etc/log-create-user.log
+echo -e "============================"
+echo -e "Link none TLS :
+${vmesslink2}" | tee -a /etc/log-create-user.log
 echo -e "============================"
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Powered by Xeileencell"
