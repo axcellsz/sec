@@ -10,7 +10,7 @@ case $set-cmenu in
 ad-dom
 ;;
 2)
-cert
+ad-cert
 ;;
 3)
 set-port
