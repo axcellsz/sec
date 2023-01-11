@@ -1,8 +1,7 @@
 #!/bin/bash
 clear
 # update vps
-    apt install socat cron zip unzip -y
-    apt install curl
+    
 # domain
 read -rp "Masukan Domain :" domain
 # buat folder xray
@@ -13,14 +12,7 @@ read -rp "Masukan Domain :" domain
     touch /var/log/xray/access.log
     touch /var/log/xray/error.log
 # install sertifikat
-    rm -rf /root/.acme.sh
-    mkdir /root/.acme.sh
-    curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
-    chmod +x /root/.acme.sh/acme.sh
-    /root/.acme.sh/acme.sh --upgrade --auto-upgrade
-    /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
-    /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-    ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
+    
 # install xray
     apt install nginx -y
     bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.6.5
@@ -54,7 +46,7 @@ if [ "$BASH" ]; then
   fi
 fi
 mesg n || true
-menu
+cmenu
 END
 chmod 644 /root/.profile
   cat >/etc/cron.d/xp_all <<-END
