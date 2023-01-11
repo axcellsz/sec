@@ -3,7 +3,6 @@ clear
 GRB="\e[92;1m"
 NCO='\033[0m'
 RED='\033[0;31m'
-TB
 
 IPX=$(curl -s ipv4.icanhazip.com)
 DOM=$(cat /etc/xray/domain)
@@ -16,4 +15,4 @@ fi
 
 echo -e " ${NCO}Ip / Host   : ${GRB}$IPX / $DOM"
 echo -e " ${NCO}X-ray Status  ${GRB}$status_server ========== t.me/axsystem"
-echo -e "==================================================="
+echo -e "=============================================="
