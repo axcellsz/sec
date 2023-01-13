@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 #rm -rf /usr/bin/menu
 #rm -rf /usr/bin/set-cmenu
 #rm -rf /usr/bin/vms-akb
@@ -10,4 +10,5 @@
 #wget -O /usr/bin/vms-def https://github.com/axcellsz/sec/raw/main/file/vms-def && chmod +x /usr/bin/vms-def
 wget -O /usr/bin/vms-flx https://github.com/axcellsz/sec/raw/main/file/vms-flx && chmod +x /usr/bin/vms-flx
 #wget -O /usr/bin/vms-man https://github.com/axcellsz/sec/raw/main/file/vms-man && chmod +x /usr/bin/vms-man
-wget -O /usr/bin/set-akun https://github.com/axcellsz/sec/raw/main/file/set-akun && chmod +x /usr/bin/set-akun
+#wget -O /usr/bin/set-akun https://github.com/axcellsz/sec/raw/main/file/set-akun && chmod +x /usr/bin/set-akun
+wget -O /usr/bin/tampilan https://github.com/axcellsz/sec/raw/main/file/tampilan && chmod +x /usr/bin/tampilan
