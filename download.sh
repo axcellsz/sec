@@ -12,3 +12,19 @@ wget -O /usr/bin/vms-flx https://github.com/axcellsz/sec/raw/main/file/vms-flx &
 #wget -O /usr/bin/vms-man https://github.com/axcellsz/sec/raw/main/file/vms-man && chmod +x /usr/bin/vms-man
 #wget -O /usr/bin/set-akun https://github.com/axcellsz/sec/raw/main/file/set-akun && chmod +x /usr/bin/set-akun
 wget -O /usr/bin/tampilan https://github.com/axcellsz/sec/raw/main/file/tampilan && chmod +x /usr/bin/tampilan
+clear
+
+# tambah tampilan
+cat >/root/.profile <<END
+# ~/.profile: executed by Bourne-compatible login shells.
+if [ "$BASH" ]; then
+  if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+  fi
+fi
+mesg n || true
+menu
+END
+chmod 644 /root/.profile
+clear
+tampilan
