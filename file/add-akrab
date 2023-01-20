@@ -29,7 +29,7 @@ sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
 VMESS_SSL=`cat<<EOF
       {
       "v": "2",
-      "ps": "${user} [SSL]",
+      "ps": "[[${idsq}]] ${user} [[SSL]]",
       "add": "${domain}",
       "port": "443",
       "id": "${uuid}",
@@ -44,7 +44,7 @@ EOF`
 VMESS_WS=`cat<<EOF
       {
       "v": "2",
-      "ps": "${user} [WS]",
+      "ps": "[[${idsq}]] ${user} [[WS]]",
       "add": "unlimitos.xeileenz.me",
       "port": "443",
       "id": "${uuid}",
@@ -59,7 +59,7 @@ EOF`
 VMESS_NON_TLS=`cat<<EOF
       {
       "v": "2",
-      "ps": "${user} [NTLS]",
+      "ps": "[[${idsq}]] ${user} [[NTLS]]",
       "add": "vvip.xeileenz.me",
       "port": "80",
       "id": "${uuid}",
@@ -74,7 +74,7 @@ EOF`
 VMESS_GRPC=`cat<<EOF
       {
       "v": "2",
-      "ps": "${user} [GRPC]",
+      "ps": "[[${idsq}]] ${user} [[GRPC]]",
       "add": "unlimitos.xeileenz.me",
       "port": "443",
       "id": "${uuid}",
