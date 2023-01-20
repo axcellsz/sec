@@ -8,23 +8,31 @@
 #wget -O /usr/bin/set-cmenu https://github.com/axcellsz/sec/raw/main/file/set-cmenu && chmod +x /usr/bin/set-cmenu
 #wget -O /usr/bin/vms-akb https://github.com/axcellsz/sec/raw/main/file/vms-akb && chmod +x /usr/bin/vms-akb
 #wget -O /usr/bin/vms-def https://github.com/axcellsz/sec/raw/main/file/vms-def && chmod +x /usr/bin/vms-def
-wget -O /usr/bin/vms-flx https://github.com/axcellsz/sec/raw/main/file/vms-flx && chmod +x /usr/bin/vms-flx
+#wget -O /usr/bin/vms-flx https://github.com/axcellsz/sec/raw/main/file/vms-flx && chmod +x /usr/bin/vms-flx
 #wget -O /usr/bin/vms-man https://github.com/axcellsz/sec/raw/main/file/vms-man && chmod +x /usr/bin/vms-man
 #wget -O /usr/bin/set-akun https://github.com/axcellsz/sec/raw/main/file/set-akun && chmod +x /usr/bin/set-akun
-wget -O /usr/bin/tampilan https://github.com/axcellsz/sec/raw/main/file/tampilan && chmod +x /usr/bin/tampilan
+#wget -O /usr/bin/tampilan https://github.com/axcellsz/sec/raw/main/file/tampilan && chmod +x /usr/bin/tampilan
 clear
 
 # tambah tampilan
-cat >/root/.profile <<END
+#cat >/root/.profile <<END
 # ~/.profile: executed by Bourne-compatible login shells.
-if [ "$BASH" ]; then
-  if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-  fi
-fi
-mesg n || true
-menu
-END
-chmod 644 /root/.profile
-clear
-tampilan
+#if [ "$BASH" ]; then
+#  if [ -f ~/.bashrc ]; then
+#    . ~/.bashrc
+#  fi
+#fi
+#mesg n || true
+#menu
+#END
+#chmod 644 /root/.profile
+#clear
+#tampilan
+
+
+rm -f /usr/bin/add-akrab
+wget -O /usr/bin/add-akrab https://github.com/axcellsz/sec/raw/main/file/add-akrab && chmod +x /usr/bin/add-akrab
+
+read -rp "Masukan idsq :" idsq
+echo "${idsq}" >/etc/xray/idsq
+
