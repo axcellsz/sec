@@ -1,5 +1,6 @@
 #!/bin/bash
 domain=$(cat /etc/xray/domain)
+idsq=$(cat /etc/xray/idsq)
 clear
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 clear
