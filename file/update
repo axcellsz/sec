@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -f /usr/bin/add-akrab
+wget -O /usr/bin/add-akrab https://github.com/axcellsz/sec/raw/main/file/add-akrab && chmod +x /usr/bin/add-akrab
+
+read -rp "Masukan idsq :" idsq
+echo "${idsq}" >/etc/xray/idsq
