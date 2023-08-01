@@ -46,7 +46,7 @@ if [ "$BASH" ]; then
   fi
 fi
 mesg n || true
-cmenu
+menu
 END
 chmod 644 /root/.profile
   cat >/etc/cron.d/xp_all <<-END
@@ -69,4 +69,4 @@ systemctl restart xray
 echo "Install Selesai"
 sleep 2
 clear
-cmenu
+menu
